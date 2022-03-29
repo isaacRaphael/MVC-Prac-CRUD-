@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Rocky2.Models.ApplicationType>
+
+
+
+<div class="container pt-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-info">Application Type List List</h2>
+        </div>
+        <div class="col-6 text-primary text-right">
+            <a asp-action="Create" class="btn btn-outline-info">
+                Add New Application Type
+            </a>
+        </div>
+    </div>
+    <br /><br />
+
+    @if (Model.Count() > 0)
+    {
+
+        <table class="table table-striped table-bordered" style="width : 100%">
+            <thead>
+                <tr>
+                    <th>
+                        Application Type Name
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var apptype in Model)
+                {
+                    <tr>
+                        <td width="50%">@apptype.Name</td>
+                        <td></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    }
+    else
+    {
+        <p>There are No Categories</p>
+    }
+
+</div>
+
