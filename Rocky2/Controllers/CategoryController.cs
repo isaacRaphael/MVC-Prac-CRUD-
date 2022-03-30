@@ -77,7 +77,7 @@ namespace Rocky2.Controllers
             return RedirectToAction("Index");
         }
 
-        //Get - Delete 
+        //Get - Delete  
         public async Task<IActionResult> Delete(int? id)
         {
             
